@@ -49,6 +49,10 @@ namespace DemoTest.Api
 
             app.UseHttpsRedirection();
 
+            // Default.html @ wwwroot
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthorization();
