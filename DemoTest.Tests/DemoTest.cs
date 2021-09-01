@@ -25,7 +25,7 @@ namespace DemoTest.Tests
             // Create DB
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
-                //.AddEnvironmentVariables()
+                .AddEnvironmentVariables()
                 .Build();
             var optionsBuilder = new DbContextOptionsBuilder<CustomerContext>();
             optionsBuilder.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]);
